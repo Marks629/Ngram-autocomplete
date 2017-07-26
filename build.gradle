@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'ngram.Driver'
+
+getRepositories {
+    mavenCentral()
+}
+
+jar {
+    baseName = 'ngram-aucom'
+    version = '0.1.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "org.apache.hadoop:hadoop-mapreduce-client-core:2.2.0"
+    compile "org.apache.hadoop:hadoop-core:1.2.1"
+}
