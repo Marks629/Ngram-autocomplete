@@ -3,7 +3,7 @@ apply plugin: 'application'
 
 mainClassName = 'ngram.Driver'
 
-getRepositories {
+repositories {
     mavenCentral()
 }
 
