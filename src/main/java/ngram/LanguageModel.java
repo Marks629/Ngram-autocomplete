@@ -61,28 +61,6 @@ public class LanguageModel {
 
         int topN;
 
-        class WordCount {
-            String word;
-            int count;
-
-            public WordCount(String word, int count) {
-                this.word = word;
-                this.count = count;
-            }
-        }
-
-        class WordQueue extends PriorityQueue<WordCount> {
-            @Override
-            protected boolean lessThan(Object o, Object o1) {
-                return ((WordCount) o).count < ((WordCount) o1).count;
-            }
-
-            public WordQueue(int size) {
-                super();
-                initialize(size);
-            }
-        }
-
         @Override
         protected void setup(Context context) throws IOException, InterruptedException {
             Configuration configuration = context.getConfiguration();
