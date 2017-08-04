@@ -6,8 +6,8 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapred.lib.db.DBConfiguration;
-import org.apache.hadoop.mapred.lib.db.DBOutputFormat;
+import org.apache.hadoop.mapreduce.lib.db.DBConfiguration;
+import org.apache.hadoop.mapreduce.lib.db.DBOutputFormat;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
@@ -55,7 +55,7 @@ public class Driver {
         job2.setJobName("LangModel");
         job2.setJarByClass(Driver.class);
 
-        //job2.addArchiveToClassPath(new Path(""));
+        job2.addArchiveToClassPath(new Path(""));
 
         job2.setMapOutputKeyClass(Text.class);
         job2.setMapOutputValueClass(Text.class);
